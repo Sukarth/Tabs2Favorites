@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Save Selected Tabs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="save_dialog.css">
+</head>
+
+<body>
+    <!-- Structure optimized for Flexbox vertical layout -->
+    <header class="dialog-header">
+        <h1>Save Selected Tabs</h1>
+    </header>
+
+    <main class="dialog-content">
+        <div class="form-group save-options">
+            <label class="radio-label">
+                <input type="radio" name="save-mode" value="create" checked>
+                Create New Folder Inside Selected
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="save-mode" value="direct">
+                Save Directly Inside Selected
+            </label>
+        </div>
+
+        <div class="form-group" id="new-folder-name-group">
+            <label for="folder-name">New Folder Name:</label>
+            <input type="text" id="folder-name" required>
+        </div>
+
+        <div class="form-group form-group-tree"> <!-- Flex-grow applied here -->
+            <div class="tree-header">
+                <label>Location:</label>
+                <div class="tree-controls">
+                    <button id="expand-all" title="Expand All Folders">Expand</button>
+                    <button id="collapse-all" title="Collapse All Folders">Collapse</button>
+                </div>
+            </div>
+            <div id="folder-tree" class="folder-tree-container" role="tree" aria-label="Bookmark Folders">
+                <div class="loading">Loading folders...</div>
+            </div>
+            <div id="selected-folder-path" class="selected-path-display">Selected: <span>None</span></div>
+        </div>
+    </main>
+
+    <footer class="dialog-footer">
+        <div id="status"></div>
+        <div class="buttons">
+            <button id="cancel-button" class="button-secondary">Cancel</button>
+            <button id="save-button" class="button-primary">Save Tabs</button>
+        </div>
+    </footer>
+
+    <script src="save_dialog.js"></script>
+</body>
+
+</html>

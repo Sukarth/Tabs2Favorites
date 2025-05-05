@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Bookmark Selected Tabs",
+    "version": "1.0",
+    "description": "Adds context menu options to bookmark selected tabs.",
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "contextMenus",
+        "storage",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_title": "Bookmark Selected Tabs Information"
+    }
+}

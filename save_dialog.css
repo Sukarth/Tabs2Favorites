@@ -1,0 +1,423 @@
+/* --- Base & Variables --- */
+:root {
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --base-font-size: 13px;
+    --border-radius: 6px;
+
+    /* --- NEW ACCENT COLOR (Blue from Selection) --- */
+    --accent-color: #0969da;
+    /* GitHub Blue */
+    --accent-hover-color: #0550ae;
+    /* Darker blue for hover */
+    --focus-ring-color: rgba(9, 105, 218, 0.4);
+
+    /* Light Theme */
+    --bg-color: #ffffff;
+    --text-color: #1f2328;
+    --muted-text-color: #656d76;
+    --border-color: #d0d7de;
+    --input-bg: #f6f8fa;
+    --input-border: #d0d7de;
+    --primary-bg: var(--accent-color);
+    /* USE ACCENT COLOR */
+    --primary-text: #ffffff;
+    --primary-hover-bg: var(--accent-hover-color);
+    /* USE ACCENT HOVER */
+    --secondary-bg: #f6f8fa;
+    --secondary-text: #1f2328;
+    --secondary-hover-bg: #eef1f4;
+    /* Slightly adjusted hover */
+    --secondary-border: rgba(27, 31, 36, 0.15);
+    --selected-bg: #ddf4ff;
+    /* Keep selection distinct */
+    --selected-text: #0969da;
+    /* Selection text matches accent */
+    --hover-bg: #f6f8fa;
+    --icon-color: #57606a;
+
+    /* --- UPDATED SVG ICONS (URL Encoded) --- */
+    /* User Provided Closed Folder */
+    --icon-folder-closed: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='%2357606A'%3E%3Cpolygon points='1.75 2.75,1.75 13.25,14.25 13.25,14.25 4.75,8.25 4.75,6.75 2.75'/%3E%3C/svg%3E");
+    /* Standard Open Folder (Matches Style Better) */
+    --icon-folder-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath d='M1 2.826a1 1 0 0 1 1-1h2.764l.958 1.916a1 1 0 0 0 .774.558h4.004a1 1 0 0 1 .992.883l.637 7A1 1 0 0 1 13.174 14H2.826a1 1 0 0 1-.991-.883l-.637-7A1 1 0 0 1 1 4.114V2.826zm.54 3.87L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19z'/%3E%3C/svg%3E");
+    /* Chevron Right (Collapsed) */
+    --icon-toggle-collapsed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    /* Chevron Down (Expanded) */
+    --icon-toggle-expanded: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+html[data-theme="dark"] {
+    /* --- UPDATED Dark Theme --- */
+    --bg-color: #22272e;
+    --text-color: #cdd9e5;
+    --muted-text-color: #768390;
+    --border-color: #444c56;
+    --input-bg: #2d333b;
+    --input-border: #444c56;
+    /* Dark Accent Color */
+    --accent-color: #58a6ff;
+    /* Lighter Blue for dark mode */
+    --accent-hover-color: #70b4ff;
+    /* Slightly lighter hover */
+    --focus-ring-color: rgba(88, 166, 255, 0.4);
+
+    --primary-bg: var(--accent-color);
+    /* USE ACCENT COLOR */
+    --primary-text: #0c1e31;
+    /* Dark text on light blue */
+    --primary-hover-bg: var(--accent-hover-color);
+    --secondary-bg: #2d333b;
+    --secondary-text: #cdd9e5;
+    --secondary-hover-bg: #373e47;
+    --secondary-border: #444c56;
+    --selected-bg: rgba(88, 166, 255, 0.15);
+    /* Use accent related color */
+    --selected-text: var(--accent-color);
+    /* Match accent */
+    --hover-bg: #2d333b;
+    --icon-color: #768390;
+
+    /* Update Icon Colors */
+    --icon-folder-closed: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='%23768390'%3E%3Cpolygon points='1.75 2.75,1.75 13.25,14.25 13.25,14.25 4.75,8.25 4.75,6.75 2.75'/%3E%3C/svg%3E");
+    --icon-folder-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23768390' viewBox='0 0 16 16'%3E%3Cpath d='M1 2.826a1 1 0 0 1 1-1h2.764l.958 1.916a1 1 0 0 0 .774.558h4.004a1 1 0 0 1 .992.883l.637 7A1 1 0 0 1 13.174 14H2.826a1 1 0 0 1-.991-.883l-.637-7A1 1 0 0 1 1 4.114V2.826zm.54 3.87L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19z'/%3E%3C/svg%3E");
+    --icon-toggle-collapsed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23768390' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    --icon-toggle-expanded: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23768390' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+/* --- Layout & General (Mostly Unchanged) --- */
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dialog-header {
+    padding: 15px 20px 10px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    font-size: 1.15em;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dialog-content {
+    padding: 15px 20px;
+    padding-bottom: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-footer {
+    padding: 10px 20px 15px;
+    flex-shrink: 0;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--muted-text-color);
+    font-size: 0.9em;
+}
+
+.form-group-tree {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    margin-bottom: 5px;
+}
+
+/* Save Options & Radio Button Color */
+.save-options {
+    display: flex;
+    gap: 15px;
+}
+
+.save-options .radio-label {
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.save-options input[type="radio"] {
+    accent-color: var(--accent-color);
+    /* APPLY ACCENT COLOR */
+    margin: 0;
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-size: 0.95em;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring-color);
+}
+
+body:has(input[name="save-mode"][value="direct"]:checked) #new-folder-name-group {
+    display: none;
+}
+
+/* --- Folder Tree (Icons Updated) --- */
+.tree-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.tree-header label {
+    margin-bottom: 0;
+}
+
+.tree-controls button {
+    padding: 3px 7px;
+    font-size: 0.8em;
+    margin-left: 4px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--muted-text-color);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.tree-controls button:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--muted-text-color);
+}
+
+.folder-tree-container {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: var(--bg-color);
+}
+
+.loading {
+    color: var(--muted-text-color);
+    padding: 10px;
+    font-style: italic;
+}
+
+.tree-node {
+    padding-left: 18px;
+    position: relative;
+}
+
+.tree-node>.node-content {
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    transition: background-color 0.1s ease;
+    white-space: nowrap;
+}
+
+.tree-node>.node-content:hover {
+    background-color: var(--hover-bg);
+}
+
+.tree-node>.node-content.selected {
+    background-color: var(--selected-bg);
+    color: var(--selected-text);
+}
+
+.tree-node>.node-content.selected .folder-icon,
+.tree-node>.node-content.selected .toggle-icon {
+    background-color: var(--selected-text);
+}
+
+/* Icons - Using mask (Check paths if still needed) */
+.toggle-icon,
+.folder-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-right: 4px;
+    background-color: var(--icon-color);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+}
+
+.toggle-icon {
+    mask-image: var(--icon-toggle-collapsed);
+    cursor: pointer;
+}
+
+.toggle-icon:hover {
+    opacity: 1;
+}
+
+.tree-node.expanded>.node-content>.toggle-icon {
+    mask-image: var(--icon-toggle-expanded);
+}
+
+.toggle-icon.placeholder {
+    opacity: 0;
+    cursor: default;
+}
+
+.folder-icon {
+    mask-image: var(--icon-folder-closed);
+    /* UPDATED */
+    margin-right: 5px;
+}
+
+.tree-node.expanded>.node-content>.folder-icon {
+    mask-image: var(--icon-folder-open);
+    /* UPDATED */
+}
+
+.folder-name {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.node-children {
+    display: none;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.tree-node.expanded>.node-children {
+    display: block;
+}
+
+/* Selected Path Display */
+.selected-path-display {
+    font-size: 0.8em;
+    color: var(--muted-text-color);
+    margin-top: 6px;
+    margin-bottom: 4px;
+    /* padding: 3px 6px; */
+    padding: 3px 6px 4px 6px;
+    background-color: var(--input-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.selected-path-display span {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* --- Buttons & Status (Primary Button Color Changed) --- */
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 7px 14px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+    line-height: 1.4;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-primary {
+    background-color: var(--primary-bg);
+    /* Uses accent */
+    color: var(--primary-text);
+}
+
+.button-primary:hover:not(:disabled) {
+    background-color: var(--primary-hover-bg);
+    /* Uses accent hover */
+}
+
+.button-primary:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.button-secondary {
+    background-color: var(--secondary-bg);
+    color: var(--secondary-text);
+    border: 1px solid var(--secondary-border);
+}
+
+.button-secondary:hover:not(:disabled) {
+    background-color: var(--secondary-hover-bg);
+    border-color: var(--muted-text-color);
+}
+
+.button-secondary:focus-visible {
+    outline: 2px solid var(--secondary-bg);
+    outline-offset: 2px;
+}
+
+#status {
+    font-size: 0.85em;
+    color: #cf222e;
+    flex-grow: 1;
+    text-align: left;
+    padding-right: 10px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
