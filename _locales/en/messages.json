@@ -1,0 +1,22 @@
+{
+    "extensionName": {
+        "message": "Tabs2Favorites",
+        "description": "The name of the extension."
+    },
+    "extensionDescription": {
+        "message": "Save selected browser tabs into a new or existing bookmark folder quickly and easily, with an option to also close them after bookmarking.",
+        "description": "A concise description of what the extension does."
+    },
+    "actionDefaultTitle": {
+        "message": "Tabs2Favorites Information",
+        "description": "Default title for the browser action button (toolbar icon)."
+    },
+    "commandSaveSelectedTabs": {
+        "message": "Save selected tabs to Favorites",
+        "description": "Description for the 'save-selected-tabs' command."
+    },
+    "commandSaveSelectedTabsAndClose": {
+        "message": "Save selected tabs to Favorites and close them",
+        "description": "Description for the 'save-selected-tabs-and-close' command."
+    }
+}

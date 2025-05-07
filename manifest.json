@@ -2,7 +2,10 @@
     "manifest_version": 3,
     "name": "Tabs2Favorites",
     "version": "1.0.0",
-    "description": "Save selected tabs into a new or existing bookmark folder.",
+    "author": "Sukarth",
+    "homepage_url": "https://github.com/Sukarth/Tabs2Favorites",
+    "description": "Save selected browser tabs into a new or existing bookmark folder easily, and choose if you want to close them after bookmarking",
+    "default_locale": "en",
     "permissions": [
         "tabs",
         "bookmarks",
@@ -24,7 +27,7 @@
         "128": "icons/icon128.png"
     },
     "action": {
-        "default_title": "Tabs2Favorites Information"
+        "default_title": "__MSG_actionDefaultTitle__"
     },
     "commands": {
         "save-selected-tabs": {
@@ -32,14 +35,14 @@
                 "default": "Alt+3",
                 "mac": "Alt+3"
             },
-            "description": "Save selected tabs to Favorites"
+            "description": "__MSG_commandSaveSelectedTabs__"
         },
         "save-selected-tabs-and-close": {
             "suggested_key": {
                 "default": "Alt+4",
                 "mac": "Alt+4"
             },
-            "description": "Save selected tabs to Favorites and close them"
+            "description": "__MSG_commandSaveSelectedTabsAndClose__"
         }
     }
 }
