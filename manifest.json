@@ -1,14 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "Bookmark Selected Tabs",
-    "version": "1.0",
-    "description": "Adds context menu options to bookmark selected tabs.",
+    "name": "Tabs2Favorites",
+    "version": "1.0.0",
+    "description": "Save selected tabs into a new or existing bookmark folder.",
     "permissions": [
         "tabs",
         "bookmarks",
         "contextMenus",
         "storage",
-        "notifications"
+        "notifications",
+        "system.display"
     ],
     "background": {
         "service_worker": "background.js"
@@ -16,7 +17,29 @@
     "host_permissions": [
         "<all_urls>"
     ],
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
     "action": {
-        "default_title": "Bookmark Selected Tabs Information"
+        "default_title": "Tabs2Favorites Information"
+    },
+    "commands": {
+        "save-selected-tabs": {
+            "suggested_key": {
+                "default": "Alt+3",
+                "mac": "Alt+3"
+            },
+            "description": "Save selected tabs to Favorites"
+        },
+        "save-selected-tabs-and-close": {
+            "suggested_key": {
+                "default": "Alt+4",
+                "mac": "Alt+4"
+            },
+            "description": "Save selected tabs to Favorites and close them"
+        }
     }
 }

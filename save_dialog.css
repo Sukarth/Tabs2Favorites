@@ -4,14 +4,12 @@
     --base-font-size: 13px;
     --border-radius: 6px;
 
-    /* --- NEW ACCENT COLOR (Blue from Selection) --- */
+    /* Accent Color Scheme (GitHub-inspired Blue) */
     --accent-color: #0969da;
-    /* GitHub Blue */
-    --accent-hover-color: #0550ae;
-    /* Darker blue for hover */
+    --accent-hover-color: #0550ae; /* Darker blue for hover */
     --focus-ring-color: rgba(9, 105, 218, 0.4);
 
-    /* Light Theme */
+    /* Light Theme Defaults */
     --bg-color: #ffffff;
     --text-color: #1f2328;
     --muted-text-color: #656d76;
@@ -19,74 +17,53 @@
     --input-bg: #f6f8fa;
     --input-border: #d0d7de;
     --primary-bg: var(--accent-color);
-    /* USE ACCENT COLOR */
     --primary-text: #ffffff;
     --primary-hover-bg: var(--accent-hover-color);
-    /* USE ACCENT HOVER */
     --secondary-bg: #f6f8fa;
     --secondary-text: #1f2328;
     --secondary-hover-bg: #eef1f4;
-    /* Slightly adjusted hover */
     --secondary-border: rgba(27, 31, 36, 0.15);
-    --selected-bg: #ddf4ff;
-    /* Keep selection distinct */
-    --selected-text: #0969da;
-    /* Selection text matches accent */
+    --selected-bg: #ddf4ff;         /* Distinct background for selected tree items */
+    --selected-text: #0969da;       /* Selection text matches accent */
     --hover-bg: #f6f8fa;
     --icon-color: #57606a;
 
-    /* --- UPDATED SVG ICONS (URL Encoded) --- */
-    /* User Provided Closed Folder */
-    --icon-folder-closed: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='%2357606A'%3E%3Cpolygon points='1.75 2.75,1.75 13.25,14.25 13.25,14.25 4.75,8.25 4.75,6.75 2.75'/%3E%3C/svg%3E");
-    /* Standard Open Folder (Matches Style Better) */
-    --icon-folder-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath d='M1 2.826a1 1 0 0 1 1-1h2.764l.958 1.916a1 1 0 0 0 .774.558h4.004a1 1 0 0 1 .992.883l.637 7A1 1 0 0 1 13.174 14H2.826a1 1 0 0 1-.991-.883l-.637-7A1 1 0 0 1 1 4.114V2.826zm.54 3.87L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19z'/%3E%3C/svg%3E");
-    /* Chevron Right (Collapsed) */
-    --icon-toggle-collapsed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-    /* Chevron Down (Expanded) */
-    --icon-toggle-expanded: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    /* SVG Icons (URL Encoded) */
+    /* Folder icons provided by user, Chevron icons are standard Bootstrap-style */
+    --icon-folder-closed: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20width%3D%22800%22%20height%3D%22800%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221%22%3E%3Cpolygon%20points%3D%221.75%202.531%201.75%2013.25%2014.25%2013.25%2014.25%204.574%208.25%204.574%206.75%202.531%22%20style%3D%22%22%2F%3E%3C%2Fsvg%3E");
+    --icon-folder-open: url("data:image/svg+xml,%3Csvg%20width%3D%22800%22%20height%3D%22800%22%20viewBox%3D%220%200%2036%2036%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20class%3D%22clr-i-solid%20clr-i-solid-path-1%22%20d%3D%22M35.32%2013.74a1.71%201.71%200%200%200-1.45-.74h-22.7a2.59%202.59%200%200%200-2.25%201.52%201%201%200%200%200%200%20.14L6%2025V7h6.49l2.61%203.59a1%201%200%200%200%20.81.41H32a2%202%200%200%200-2-2H16.42l-2.31-3.18A2%202%200%200%200%2012.49%205H6a2%202%200%200%200-2%202v22.69A1.37%201.37%200%200%200%205.41%2031h24.93a1%201%200%200%200%201-.72l4.19-15.1a1.64%201.64%200%200%200-.21-1.44%22%2F%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h36v36H0z%22%2F%3E%3C%2Fsvg%3E");
+    --icon-toggle-collapsed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); /* Chevron Right */
+    --icon-toggle-expanded: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2357606A' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); /* Chevron Down */
 }
 
 html[data-theme="dark"] {
-    /* --- UPDATED Dark Theme --- */
+    /* Dark Theme Overrides */
     --bg-color: #22272e;
     --text-color: #cdd9e5;
     --muted-text-color: #768390;
     --border-color: #444c56;
     --input-bg: #2d333b;
     --input-border: #444c56;
-    /* Dark Accent Color */
-    --accent-color: #58a6ff;
-    /* Lighter Blue for dark mode */
-    --accent-hover-color: #70b4ff;
-    /* Slightly lighter hover */
+    --accent-color: #58a6ff;         /* Lighter Blue for dark mode */
+    --accent-hover-color: #70b4ff;   /* Slightly lighter hover */
     --focus-ring-color: rgba(88, 166, 255, 0.4);
 
     --primary-bg: var(--accent-color);
-    /* USE ACCENT COLOR */
-    --primary-text: #0c1e31;
-    /* Dark text on light blue */
+    --primary-text: #0c1e31;         /* Dark text on light blue accent */
     --primary-hover-bg: var(--accent-hover-color);
     --secondary-bg: #2d333b;
     --secondary-text: #cdd9e5;
     --secondary-hover-bg: #373e47;
     --secondary-border: #444c56;
-    --selected-bg: rgba(88, 166, 255, 0.15);
-    /* Use accent related color */
-    --selected-text: var(--accent-color);
-    /* Match accent */
+    --selected-bg: rgba(88, 166, 255, 0.15); /* Accent-related selection background */
+    --selected-text: var(--accent-color);    /* Match accent for selected text */
     --hover-bg: #2d333b;
     --icon-color: #768390;
-
-    /* Update Icon Colors */
-    --icon-folder-closed: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='%23768390'%3E%3Cpolygon points='1.75 2.75,1.75 13.25,14.25 13.25,14.25 4.75,8.25 4.75,6.75 2.75'/%3E%3C/svg%3E");
-    --icon-folder-open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23768390' viewBox='0 0 16 16'%3E%3Cpath d='M1 2.826a1 1 0 0 1 1-1h2.764l.958 1.916a1 1 0 0 0 .774.558h4.004a1 1 0 0 1 .992.883l.637 7A1 1 0 0 1 13.174 14H2.826a1 1 0 0 1-.991-.883l-.637-7A1 1 0 0 1 1 4.114V2.826zm.54 3.87L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19z'/%3E%3C/svg%3E");
-    --icon-toggle-collapsed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23768390' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-    --icon-toggle-expanded: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23768390' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
 }
 
-/* --- Layout & General (Mostly Unchanged) --- */
+/* --- General Layout & Typography --- */
 html {
-    height: 100%;
+    height: 100%; /* Ensure html takes full height for body flex layout */
 }
 
 body {
@@ -96,14 +73,14 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
+    flex-direction: column; /* Main axis for header, content, footer */
+    height: 100%;           /* Take full viewport height */
+    overflow: hidden;       /* Prevent body scrollbars, manage scrolling within components */
 }
 
 .dialog-header {
     padding: 15px 20px 10px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent header from shrinking */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -116,27 +93,28 @@ h1 {
 
 .dialog-content {
     padding: 15px 20px;
-    padding-bottom: 0;
-    flex-grow: 1;
-    overflow: hidden;
+    padding-bottom: 0; /* Remove bottom padding to allow tree to use space */
+    flex-grow: 1;      /* Allow content to take available vertical space */
+    overflow: hidden;  /* Prevent content itself from overflowing, manage scroll in .folder-tree-container */
     display: flex;
     flex-direction: column;
 }
 
 .dialog-footer {
     padding: 10px 20px 15px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent footer from shrinking */
     border-top: 1px solid var(--border-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Status on left, buttons on right */
     align-items: center;
 }
 
+/* --- Form Elements --- */
 .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
+.form-group label { /* General label styling */
     display: block;
     margin-bottom: 6px;
     font-weight: 500;
@@ -144,18 +122,18 @@ h1 {
     font-size: 0.9em;
 }
 
-.form-group-tree {
-    flex-grow: 1;
+.form-group-tree { /* Container for the folder tree section */
+    flex-grow: 1; /* Allow tree group to expand */
     display: flex;
     flex-direction: column;
-    min-height: 100px;
-    margin-bottom: 5px;
+    min-height: 100px; /* Ensure tree has some minimum visible height */
+    margin-bottom: 5px; /* Reduced bottom margin for tighter layout */
 }
 
-/* Save Options & Radio Button Color */
-.save-options {
+.save-options { /* Container for radio button choices */
     display: flex;
     gap: 15px;
+    margin-bottom: 10px;
 }
 
 .save-options .radio-label {
@@ -163,19 +141,17 @@ h1 {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-weight: normal;
+    font-weight: normal; /* Override general label bolding */
     color: var(--text-color);
     cursor: pointer;
 }
 
 .save-options input[type="radio"] {
-    accent-color: var(--accent-color);
-    /* APPLY ACCENT COLOR */
+    accent-color: var(--accent-color); /* Style the radio button itself */
     margin: 0;
 }
 
-/* Input Field */
-input[type="text"] {
+input[type="text"] { /* Styling for the new folder name input */
     width: 100%;
     padding: 8px 10px;
     border: 1px solid var(--input-border);
@@ -190,26 +166,27 @@ input[type="text"] {
 input[type="text"]:focus {
     border-color: var(--accent-color);
     outline: none;
-    box-shadow: 0 0 0 3px var(--focus-ring-color);
+    box-shadow: 0 0 0 3px var(--focus-ring-color); /* Focus ring for accessibility */
 }
 
+/* Hide new folder name input when "Save Directly" is chosen (JS also handles this) */
 body:has(input[name="save-mode"][value="direct"]:checked) #new-folder-name-group {
     display: none;
 }
 
-/* --- Folder Tree (Icons Updated) --- */
+/* --- Folder Tree --- */
 .tree-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.tree-header label {
+.tree-header label { /* "Location:" label */
     margin-bottom: 0;
 }
 
-.tree-controls button {
+.tree-controls button { /* Expand/Collapse buttons */
     padding: 3px 7px;
     font-size: 0.8em;
     margin-left: 4px;
@@ -230,55 +207,55 @@ body:has(input[name="save-mode"][value="direct"]:checked) #new-folder-name-group
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 5px;
-    flex-grow: 1;
-    overflow-y: auto;
+    flex-grow: 1;       /* Allow tree to fill available space in .form-group-tree */
+    overflow-y: auto;   /* Enable vertical scrolling for the tree */
     background-color: var(--bg-color);
 }
 
-.loading {
+.loading { /* "Loading folders..." message */
     color: var(--muted-text-color);
     padding: 10px;
     font-style: italic;
 }
 
-.tree-node {
-    padding-left: 18px;
-    position: relative;
+.tree-node { /* Individual folder item in the tree */
+    padding-left: 18px; /* Indentation for nesting, adjust as needed */
+    position: relative; /* For absolute positioning of pseudo-elements if used for lines */
 }
 
-.tree-node>.node-content {
+.tree-node > .node-content { /* Clickable area of a tree node */
     display: flex;
     align-items: center;
     padding: 3px 5px;
     cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 1px;
+    border-radius: 4px; /* Slightly smaller radius for items within the container */
+    margin-bottom: 1px; /* Small gap between items */
     transition: background-color 0.1s ease;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent folder names from wrapping */
 }
 
-.tree-node>.node-content:hover {
+.tree-node > .node-content:hover {
     background-color: var(--hover-bg);
 }
 
-.tree-node>.node-content.selected {
+.tree-node > .node-content.selected {
     background-color: var(--selected-bg);
     color: var(--selected-text);
 }
 
-.tree-node>.node-content.selected .folder-icon,
-.tree-node>.node-content.selected .toggle-icon {
-    background-color: var(--selected-text);
+.tree-node > .node-content.selected .folder-icon,
+.tree-node > .node-content.selected .toggle-icon {
+    background-color: var(--selected-text); /* Match icon color to selected text color */
 }
 
-/* Icons - Using mask (Check paths if still needed) */
+/* Tree Icons (Toggle and Folder) */
 .toggle-icon,
 .folder-icon {
     width: 16px;
     height: 16px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent icons from shrinking */
     margin-right: 4px;
-    background-color: var(--icon-color);
+    background-color: var(--icon-color); /* Base color, overridden by .selected */
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -295,74 +272,72 @@ body:has(input[name="save-mode"][value="direct"]:checked) #new-folder-name-group
     opacity: 1;
 }
 
-.tree-node.expanded>.node-content>.toggle-icon {
+.tree-node.expanded > .node-content > .toggle-icon {
     mask-image: var(--icon-toggle-expanded);
 }
 
-.toggle-icon.placeholder {
-    opacity: 0;
+.toggle-icon.placeholder { /* Used when a node has no children to expand/collapse */
+    opacity: 0; /* Make it invisible but maintain layout */
     cursor: default;
 }
 
 .folder-icon {
     mask-image: var(--icon-folder-closed);
-    /* UPDATED */
     margin-right: 5px;
 }
 
-.tree-node.expanded>.node-content>.folder-icon {
+.tree-node.expanded > .node-content > .folder-icon {
     mask-image: var(--icon-folder-open);
-    /* UPDATED */
 }
 
 .folder-name {
     flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden;         /* Hide overflowing text */
+    text-overflow: ellipsis;  /* Show ellipsis for long folder names */
     font-size: 0.95em;
     line-height: 1.4;
 }
 
-.node-children {
-    display: none;
-    padding-left: 0;
+.node-children { /* Container for nested tree nodes */
+    display: none; /* Hidden by default, shown when parent is .expanded */
+    padding-left: 0; /* Reset padding, indentation is handled by .tree-node */
     list-style-type: none;
 }
 
-.tree-node.expanded>.node-children {
+.tree-node.expanded > .node-children {
     display: block;
 }
 
-/* Selected Path Display */
+/* Selected Path Display (below the tree) */
 .selected-path-display {
     font-size: 0.8em;
     color: var(--muted-text-color);
     margin-top: 6px;
     margin-bottom: 4px;
-    /* padding: 3px 6px; */
-    padding: 3px 6px 4px 6px;
+    padding: 3px 6px 6px 6px;
     background-color: var(--input-bg);
     border-radius: 4px;
     border: 1px solid var(--border-color);
     white-space: nowrap;
-    /* overflow: hidden; */
+    overflow: hidden;
+    min-height: fit-content; /* Ensure it doesn't collapse if text is short */
     text-overflow: ellipsis;
     max-width: 100%;
     box-sizing: border-box;
 }
 
-.selected-path-display span {
+.selected-path-display span { /* The actual path text */
     font-weight: 500;
     color: var(--text-color);
 }
 
-/* --- Buttons & Status (Primary Button Color Changed) --- */
-.buttons {
+/* --- Footer Buttons & Status Message --- */
+.buttons { /* Container for Save/Cancel buttons */
     display: flex;
     gap: 8px;
 }
 
-button {
+button { /* General button styling */
     border: none;
     border-radius: var(--border-radius);
     padding: 7px 14px;
@@ -379,17 +354,15 @@ button:disabled {
 }
 
 .button-primary {
-    background-color: var(--primary-bg);
-    /* Uses accent */
+    background-color: var(--primary-bg); /* Uses accent color */
     color: var(--primary-text);
 }
 
 .button-primary:hover:not(:disabled) {
-    background-color: var(--primary-hover-bg);
-    /* Uses accent hover */
+    background-color: var(--primary-hover-bg); /* Uses accent hover color */
 }
 
-.button-primary:focus-visible {
+.button-primary:focus-visible { /* Accessibility focus style */
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
@@ -402,22 +375,27 @@ button:disabled {
 
 .button-secondary:hover:not(:disabled) {
     background-color: var(--secondary-hover-bg);
-    border-color: var(--muted-text-color);
+    border-color: var(--muted-text-color); /* Slightly darker border on hover */
 }
 
-.button-secondary:focus-visible {
-    outline: 2px solid var(--secondary-bg);
+.button-secondary:focus-visible { /* Accessibility focus style */
+    outline: 2px solid var(--secondary-bg); /* Use its own bg for outline to avoid clash */
     outline-offset: 2px;
 }
 
-#status {
+#status { /* Status message area in the footer */
     font-size: 0.85em;
-    color: #cf222e;
-    flex-grow: 1;
+    color: #cf222e; /* Error color (typically red) */
+    flex-grow: 1; /* Allow status to take available space */
     text-align: left;
-    padding-right: 10px;
+    padding-right: 10px; /* Space before buttons */
     line-height: 1.4;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Remove left padding for top-level tree nodes to align them with the container's edge */
+.tree-node[data-level=top] {
+    padding-left: 0;
 }

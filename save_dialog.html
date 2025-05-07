@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Save Selected Tabs</title>
+    <title>Tabs2Favorites - Save Selected Tabs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="save_dialog.css">
 </head>
 
 <body>
-    <!-- Structure optimized for Flexbox vertical layout -->
     <header class="dialog-header">
         <h1>Save Selected Tabs</h1>
     </header>
@@ -18,11 +16,11 @@
         <div class="form-group save-options">
             <label class="radio-label">
                 <input type="radio" name="save-mode" value="create" checked>
-                Create New Folder Inside Selected
+                Create New Folder Inside The Selected Folder
             </label>
             <label class="radio-label">
                 <input type="radio" name="save-mode" value="direct">
-                Save Directly Inside Selected
+                Save Directly Inside The Selected Folder
             </label>
         </div>
 
@@ -31,7 +29,7 @@
             <input type="text" id="folder-name" required>
         </div>
 
-        <div class="form-group form-group-tree"> <!-- Flex-grow applied here -->
+        <div class="form-group form-group-tree">
             <div class="tree-header">
                 <label>Location:</label>
                 <div class="tree-controls">
@@ -47,7 +45,7 @@
     </main>
 
     <footer class="dialog-footer">
-        <div id="status"></div>
+        <div id="status" aria-live="polite"></div>
         <div class="buttons">
             <button id="cancel-button" class="button-secondary">Cancel</button>
             <button id="save-button" class="button-primary">Save Tabs</button>
