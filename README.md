@@ -33,9 +33,12 @@ Save selected browser tabs into a new or existing bookmark folder quickly and ea
 
 ## Installation
 
-### From Chrome Web Store (Recommended)
+### From Broswer Web Store (Recommended)
 
+* [Link to Microsoft Edge Web Store Listing](https://microsoftedge.microsoft.com/addons/detail/tabs2favorites/neecicbcfcdnpkfbbgamcnoadmohhbem)
 * [Link to Chrome Web Store Listing - *To be added once published*]
+
+
 
 ### Manual Installation (for Development/Testing)
 
